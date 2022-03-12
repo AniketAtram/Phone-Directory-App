@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import logo from './logo.svg';
+// import './App.css';
+// Main react import
+import React from "react";
+// Fragment to render the data on we page
+import { Fragment } from "react";
+// Importing Header from Header.js file
+import Header from "./Header";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Fragment>
+    <Header /> {/*Displaying header dynamically*/}
+    <button>Add</button>
+    <div>
+      <span>Name</span> <br />
+      <span>Phone</span>
     </div>
+    </Fragment>
   );
 }
 
