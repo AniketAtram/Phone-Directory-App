@@ -3,6 +3,9 @@ import React from "react";
 // Import required to create a class componenet
 // import { Component } from "react";
 
+// Import header css
+import './Header.css';
+
 // Creating header as a class componenet
 /*
 class Header extends Component {
@@ -15,18 +18,18 @@ class Header extends Component {
 */
 
 // Adding the inline CSS props
-const headerStyle = {
-    textAlign: 'center',
-    padding: 20 ,
-    background: '#000',
-    color: '#FFF',
-    textTransform: 'uppercase'
-};
+// const headerStyle = {
+//     textAlign: 'center',
+//     padding: 20 ,
+//     background: '#000',
+//     color: '#FFF',
+//     textTransform: 'uppercase'
+// };
 
 // Creating header as a functional componenet
 const Header = function(){
     return (
-        <div className="header" style={headerStyle}> Phone Directory </div>
+        <div className="header"> Phone Directory </div>
     )
 }
 
