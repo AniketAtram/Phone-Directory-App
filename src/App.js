@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./common/Header";
 import { Fragment } from "react";
 import "./App.css";
+import "./common/common.css";
 
 const Subscribers = [
   {
