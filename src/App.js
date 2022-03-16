@@ -6,22 +6,32 @@ import "./App.css";
 const Subscribers = [
   {
     id:1,
-    name: "Aniket Atram",
+    name: "Tony Stark",
     phone: "9876543210"
   },
   {
     id:2,
-    name: "Sushila Atram",
+    name: "Steve Rodgers",
     phone: "1234567890"
+  },
+  {
+    id:3,
+    name: "Rovina Ravenclaw",
+    phone: "9999999999"
   }
 ];
+
+// Event handler for delete button
+function deleteHandler(buttonName) {
+  alert(buttonName +' clicked!');
+}
 
 class App extends React.Component {
   render() {
     return [
       <Fragment>
-      <div>
-        <Header />
+
+        <Header heading="Phone Directory" />
         <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
           <div className="grid-container heading-container">
@@ -35,14 +45,14 @@ class App extends React.Component {
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
                 <span className="grid-item action-btn-container">
-                  <button className="custom-btn delete-btn">Delete</button>
+                  <button className="custom-btn delete-btn" onClick={deleteHandler.bind(this,"Delete")}>Delete</button>
                 </span>
               </div>
             })
           }
 
         </div>
-      </div>
+      
       </Fragment>
     ];
   }
