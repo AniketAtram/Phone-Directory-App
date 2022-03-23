@@ -4,61 +4,12 @@ import { Fragment } from "react";
 import "./ShowSubscribers.css";
 import "./common/common.css";
 
-// const Subscribers = [
-//   {
-//     id:1,
-//     name: "Tony Stark",
-//     phone: "9876543210"
-//   },
-//   {
-//     id:2,
-//     name: "Steve Rodgers",
-//     phone: "1234567890"
-//   },
-//   {
-//     id:3,
-//     name: "Rovina Ravenclaw",
-//     phone: "9999999999"
-//   }
-// ];
-
-// Event handler for delete button
-// function deleteHandler(buttonName) {
-//   alert(buttonName +' clicked!');
-// }
-
 class ShowSubscribers extends React.Component {
-  // State for App component
-  constructor(props) {
-    super(props);
-    // console.log('Constructor is called.');
-    this.state = {
-      subscribersListToShow: [
-        {
-          id:1,
-          name: "Tony Stark",
-          phone: "9876543210"
-        },
-        {
-          id:2,
-          name: "Steve Rodgers",
-          phone: "1234567890"
-        },
-        {
-          id:3,
-          name: "Rovina Ravenclaw",
-          phone: "9999999999"
-        }
-      ]
-    }
-  }
-
-
+  
   render() {
-    // console.log('Render method is called.');
+    console.log(this.props);
     return [
       <Fragment>
-
         <Header heading="Phone Directory" />
         <div className="component-body-container">
           <button className="custom-btn add-btn">Add</button>
@@ -68,7 +19,7 @@ class ShowSubscribers extends React.Component {
           </div>
 
           {
-            this.state.subscribersListToShow.map(sub => {
+            this.props.subscriberList.map(sub => {
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item" key={sub.name}>{sub.name}</span>
                 <span className="grid-item" key={sub.phone}>{sub.phone}</span>
@@ -80,22 +31,10 @@ class ShowSubscribers extends React.Component {
           }
 
         </div>
-      
       </Fragment>
     ];
   }
-  // lifecycle
-  // componentDidMount(){
-  //   console.log('Component Did Mount is called!');
-  //   const newSubscriber = {
-  //     id:4,
-  //     name:"Bruce Banner",
-  //     phone:"9021874356"
-  //   }
-  //   let subscriberList = this.state.subscribersListToShow;
-  //   subscriberList.push(newSubscriber);
-  //   this.setState({subscribersListToShow : subscriberList});
-  // }
+
 }
 
 export default ShowSubscribers;

@@ -38,7 +38,7 @@ class AddSubscriber extends Component{
                 </div>
 
                 {/* Subscriber form */}
-                <form className="subscriber-form" method="GET" >
+                <form className="subscriber-form" method="GET" onSubmit={this.onFormSubmitHandler.bind(this)} >
                     <label htmlFor="name" className="label-control">Name:</label> <br />
                     <input id="name" type="text" className="input-control" name="name" onChange={this.inputChangeHandler} /> <br /> <br />
                     <label htmlFor="phone" className="label-control">Phone:</label> <br />
@@ -56,8 +56,16 @@ class AddSubscriber extends Component{
                 </form>
             </div>
             </>
-        ]
+        ];
+
+
     }
+
+    // Handler function
+    onFormSubmitHandler = (event) => {
+        event.preventDefault();
+        this.props.addSubscriberHandler(this.state);
+    } 
 }
 
 export default AddSubscriber;
