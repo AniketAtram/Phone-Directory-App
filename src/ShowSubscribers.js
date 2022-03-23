@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./common/Header";
 import { Fragment } from "react";
-import "./App.css";
+import "./ShowSubscribers.css";
 import "./common/common.css";
 
 // const Subscribers = [
@@ -27,7 +27,7 @@ import "./common/common.css";
 //   alert(buttonName +' clicked!');
 // }
 
-class App extends React.Component {
+class ShowSubscribers extends React.Component {
   // State for App component
   constructor(props) {
     super(props);
@@ -98,4 +98,4 @@ class App extends React.Component {
   // }
 }
 
-export default App;
+export default ShowSubscribers;
