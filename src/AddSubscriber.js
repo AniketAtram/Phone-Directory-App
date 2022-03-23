@@ -7,10 +7,9 @@ class AddSubscriber extends Component{
     render(){
         return[
             <>
+            {/* Header of the web-app */}
+            <Header heading="Phone Directory" />
             <div className="component-body-container">
-                {/* Header of the web-app */}
-                <Header heading="Phone Directory" />
-
                 {/* Back button */}
                 <div className="component-body-container">
                     <button className="custom-btn">Back</button>
