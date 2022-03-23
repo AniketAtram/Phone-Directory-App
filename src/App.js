@@ -31,7 +31,7 @@ class App extends React.Component {
   // State for App component
   constructor(props) {
     super(props);
-    console.log('Constructor is called.');
+    // console.log('Constructor is called.');
     this.state = {
       subscribersListToShow: [
         {
@@ -53,11 +53,9 @@ class App extends React.Component {
     }
   }
 
-  // event handler
-
 
   render() {
-    console.log('Render method is called.');
+    // console.log('Render method is called.');
     return [
       <Fragment>
 
@@ -72,8 +70,8 @@ class App extends React.Component {
           {
             this.state.subscribersListToShow.map(sub => {
               return <div key={sub.id} className="grid-container">
-                <span className="grid-item">{sub.name}</span>
-                <span className="grid-item">{sub.phone}</span>
+                <span className="grid-item" key={sub.name}>{sub.name}</span>
+                <span className="grid-item" key={sub.phone}>{sub.phone}</span>
                 <span className="grid-item action-btn-container">
                   <button className="custom-btn delete-btn" >Delete</button>
                 </span>
@@ -87,17 +85,17 @@ class App extends React.Component {
     ];
   }
   // lifecycle
-  componentDidMount(){
-    console.log('Component Did Mount is called!');
-    const newSubscriber = {
-      id:4,
-      name:"Bruce Banner",
-      phone:"9021874356"
-    }
-    let subscriberList = this.state.subscribersListToShow;
-    subscriberList.push(newSubscriber);
-    this.setState({subscribersListToShow : subscriberList});
-  }
+  // componentDidMount(){
+  //   console.log('Component Did Mount is called!');
+  //   const newSubscriber = {
+  //     id:4,
+  //     name:"Bruce Banner",
+  //     phone:"9021874356"
+  //   }
+  //   let subscriberList = this.state.subscribersListToShow;
+  //   subscriberList.push(newSubscriber);
+  //   this.setState({subscribersListToShow : subscriberList});
+  // }
 }
 
 export default App;
